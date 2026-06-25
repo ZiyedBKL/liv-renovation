@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Menu, X, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SITE } from "@/lib/schema-org";
+import { useLenis } from "@/components/providers/lenis-provider";
 
 const NAV_LINKS = [
   { href: "#services", label: "Services" },
@@ -18,6 +19,7 @@ const NAV_LINKS = [
 export function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const lenis = useLenis();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -27,17 +29,20 @@ export function Header() {
 
   useEffect(() => {
     if (open) {
+      lenis?.stop();
       document.body.style.overflow = "hidden";
       document.documentElement.style.overflow = "hidden";
     } else {
+      lenis?.start();
       document.body.style.overflow = "";
       document.documentElement.style.overflow = "";
     }
     return () => {
+      lenis?.start();
       document.body.style.overflow = "";
       document.documentElement.style.overflow = "";
     };
-  }, [open]);
+  }, [open, lenis]);
 
   return (
     <header

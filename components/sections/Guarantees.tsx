@@ -1,23 +1,23 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Clock, Zap, Shield } from "lucide-react";
+import { Clock, CalendarDays, ShieldCheck } from "lucide-react";
 
 const ITEMS = [
   {
     icon: Clock,
-    title: "Devis gratuit sous 24h",
-    desc: "Vous appelez le matin, vous avez un devis avant la nuit. Sans engagement.",
+    title: "Devis clair sous 24-48h",
+    desc: "Devis transparent communiqué après visite ou réception des informations. Sans frais cachés.",
   },
   {
-    icon: Zap,
-    title: "Intervention sous 2h en IDF",
-    desc: "Urgences traitées en priorité, partout en Île-de-France selon disponibilité.",
+    icon: CalendarDays,
+    title: "Disponibles 7j/7",
+    desc: "Nous intervenons les week-ends et jours fériés selon nos disponibilités pour les dépannages urgents.",
   },
   {
-    icon: Shield,
-    title: "Satisfait ou ré-intervention 7j",
-    desc: "Si le travail ne vous convient pas, nous revenons gratuitement sous 7 jours.",
+    icon: ShieldCheck,
+    title: "Assurés & garantie décennale",
+    desc: "Responsabilité civile professionnelle et garantie décennale pour les travaux concernés.",
   },
 ];
 
