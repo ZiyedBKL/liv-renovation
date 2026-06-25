@@ -25,6 +25,20 @@ export function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
+    };
+  }, [open]);
+
   return (
     <header
       className={cn(
@@ -82,7 +96,7 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="md:hidden fixed inset-0 z-50 bg-background flex flex-col">
+        <div data-lenis-prevent className="md:hidden fixed inset-0 z-50 bg-background/98 backdrop-blur-xl flex flex-col">
           <div className="flex items-center justify-between h-24 px-4 border-b border-border">
             <Link href="/" onClick={() => setOpen(false)} className="flex items-center" aria-label="LIV Rénovation - Accueil">
               <Image

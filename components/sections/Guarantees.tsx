@@ -23,7 +23,7 @@ const ITEMS = [
 
 export function Guarantees() {
   return (
-    <section className="bg-paper py-20 md:py-24">
+    <section className="section-light py-20 md:py-24">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <p className="font-sans text-xs tracking-[0.3em] uppercase text-muted-foreground mb-3">
