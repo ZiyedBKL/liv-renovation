@@ -108,7 +108,7 @@ export function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="font-display text-3xl tracking-tight uppercase text-foreground"
+                className="font-display text-3xl tracking-tight uppercase text-primary"
               >
                 {link.label}
               </Link>

@@ -135,11 +135,11 @@ export function FlowArtSection() {
             style={{ background: u.bg, color: u.fg }}
             aria-label={u.label}
           >
-            <p className={`text-xs font-bold uppercase tracking-[0.2em] ${u.accentText}`}>
+            <p className={`text-base md:text-xl font-bold uppercase tracking-[0.25em] ${u.accentText}`}>
               {u.number} — {u.label}
             </p>
             <hr className={`my-[2vw] border-none border-t ${u.accentBorder}`} />
-            <h2 className="font-display text-[clamp(3.5rem,12vw,14rem)] font-normal leading-[0.85] uppercase tracking-tight">
+            <h2 className="font-display text-[clamp(2.75rem,9vw,10rem)] font-normal leading-[0.85] uppercase tracking-tight">
               {u.title.map((line, i) => (
                 <span key={i} className="block">
                   {line}

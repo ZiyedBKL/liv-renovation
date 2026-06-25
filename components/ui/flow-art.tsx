@@ -25,7 +25,7 @@ export function FlowSection({
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="min-h-screen w-full px-6 py-20 md:px-16 lg:px-24"
+      className="w-full px-6 py-16 md:min-h-screen md:py-20 md:px-16 lg:px-24"
       {...props}
     >
       <div className="mx-auto max-w-7xl">{children}</div>
